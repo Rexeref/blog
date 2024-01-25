@@ -10,20 +10,18 @@ block content
           p Admin
 
   // Link per aggiungere un nuovo post
-  div(class='card my-5')
-    div(class='card-content')
-      div(class='content')
-        h2 Amministrazione del Blog
-        a(class='button is-success', href='/admin/new') Aggiungi un nuovo post
+  div(class='box my-5')
+    h2 Amministrazione del Blog
+    a(class='button is-success', href='/admin/new') Aggiungi un nuovo post
 
   if posts.length > 0
     // Elenco dei post con opzione di cancellazione
     div(class='columns is-multiline')
-      each post in posts
+      each post in posts.reverse()
         div(class='column is-2 mx-5 my-5 card')
           div(class='card-image')
             figure(class='image is-4by3')
-              img(src=post.cover_image, alt='Immagine Articolo')
+              img(src= 'uploads/' + post.cover_image, alt='Immagine Articolo')
           
           div(class='card-content')
             div(class='media')

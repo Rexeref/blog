@@ -13,7 +13,7 @@ block content
 
   div(class='mx-6')
     h2(class='subtitle is-3') Aggiungi Nuovo Post
-    form(action='/admin/posts_add', method='POST')
+    form(action='/admin/posts_add', method='POST', enctype="multipart/form-data")
 
       div(class='field')
         label(class='label', for='title') Titolo:
@@ -23,7 +23,7 @@ block content
       div(class='field')
         label(class='label', for='cover_image') Copertina:
         div(class='control')
-          input(class='input', type='file', id='cover_image', name='cover_image')
+          input(class='input', type='file', name='cover_image', accept='image/*')
 
       div(class='field')
         label(class='label', for='content') Contenuto:

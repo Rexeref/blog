@@ -10,29 +10,31 @@ block content
 					a
 						p= post.title
 
+		div(class='columns is-multiline')
+			div(class='column box is-6 is-offset-one-quarter')
+				h2(class='title is-3')= post.title
+				figure(class='image is-centered')
+					img(src= '/uploads/' + post.cover_image , alt='Immagine Articolo')
+				p(class='mx-2')= post.content
 
-		div
-			h2(class='title is-3')= post.title
-			p(class='mx-2')= post.content
 
+			div(class='column is-4 is-offset-one-sixth')
+				form(action="/comment/" + post.id, method='POST')
 
-		div(class='mx-5 my-5')
-			form(action="/comment/" + post.id, method='POST')
-
-				div(class='field')
-					label(class='label', for='comment') Inserisci il tuo commento:
+					div(class='field')
+						label(class='label', for='comment') Inserisci il tuo commento:
+							div(class='control')
+								input(class='input', type='text', id='comment', name='comment', required)
+					
+					div(class='field is-grouped')
 						div(class='control')
-							input(class='input', type='text', id='comment', name='comment', required)
-				
-				div(class='field is-grouped')
-					div(class='control')
-						input(class='button is-link', type='submit', value='Invia Commento')
+							input(class='button is-link', type='submit', value='Invia Commento')
 
-		div
-			each comment in post.comments
-				div(class='mx-3 my-5')
-					h1(class='title is-6') Qualcuno ha detto:
-					p(class='mx-5')= comment
+			div(class='column')
+				each comment in post.comments
+					div(class='box mx-3 my-5')
+						h1(class='title is-6') Qualcuno ha detto:
+						p(class='mx-5')= comment
 
 
 	else
