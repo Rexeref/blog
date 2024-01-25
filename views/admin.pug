@@ -1,0 +1,39 @@
+extends layout
+
+block content
+  nav(class='breadcrumb is-centered')
+    ul
+      li
+        a(href='/') Home
+      li(class='is-active')
+        a 
+          p Admin
+
+  // Link per aggiungere un nuovo post
+  div(class='card my-5')
+    div(class='card-content')
+      div(class='content')
+        h2 Amministrazione del Blog
+        a(class='button is-success', href='/admin/new') Aggiungi un nuovo post
+
+  if posts.length > 0
+    // Elenco dei post con opzione di cancellazione
+    div(class='columns is-multiline')
+      each post in posts
+        div(class='column is-2 mx-5 my-5 card')
+          div(class='card-image')
+            figure(class='image is-4by3')
+              img(src=post.cover_image, alt='Immagine Articolo')
+          
+          div(class='card-content')
+            div(class='media')
+              div(class='media-content')
+                p(class='title is-6')= post.title
+
+          div(class='buttons')
+            a(class='button is-primary', href='/posts/' + post.id) Leggi
+            a(class='button is-link', href='/admin/modify/' + post.id) Modifica
+            a(class='button is-danger', href='/admin/delete/' + post.id) Cancella
+
+  else
+    p Nessun post presente

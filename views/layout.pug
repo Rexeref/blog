@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css")
+    title Blog
+
+  body
+    nav(class='navbar is-light')
+      div(class='navbar-item')
+        a(href="/")
+          h1(class='is-4 is-size-1') Bloggettaro
+      
+      div(class='navbar-end')
+        div(class='navbar-item buttons mx-4')
+          a(class='button is-primary', href='/admin') Admin
+
+    div(class='my-5 mx-6')
+      block content

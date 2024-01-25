@@ -1,0 +1,62 @@
+Titolo: Creazione di un Blog con Express e Pug Parte 1
+
+
+Un blog è un sito web o una piattaforma online dove gli individui o le aziende 
+possono pubblicare contenuti in forma di articoli, post, immagini, video o altri 
+formati multimediali. Il termine "blog" deriva dalla contrazione delle parole 
+"web" e "log" (registro), indicando un diario online o un registro pubblico 
+di informazioni.
+
+I blog sono solitamente organizzati in ordine cronologico inverso, con i post 
+più recenti visualizzati per primi. Questi post possono trattare una vasta 
+gamma di argomenti come notizie, opinioni, tutorial, recensioni, esperienze 
+personali, consigli pratici e altro ancora. I lettori di un blog possono 
+interagire attraverso commenti, condivisioni sui social media o altre forme di feedback.
+
+I blog possono essere gestiti da singoli individui, gruppi o aziende e vengono 
+utilizzati per scopi diversi, tra cui espressione personale, informazione, marketing, 
+educazione e intrattenimento. Con l'avvento dei social media e delle piattaforme di 
+blogging, i blog sono diventati un mezzo popolare per condividere contenuti e 
+comunicare con un vasto pubblico online.
+
+Descrizione:
+
+Devi creare un'applicazione web per un blog che utilizzi Express come framework 
+per il server e Pug come motore di template per la generazione delle pagine HTML.
+
+Requisiti:
+
+Elenco dei Post:
+
+Crea una pagina principale (/) che mostri un elenco di post presenti nel blog.
+Ogni post deve mostrare il titolo. Deve anche essere presente un link 
+"Leggi di più" che reindirizzi alla pagina completa del post.
+
+Pagina del Singolo Post:
+
+Quando un utente clicca sul link "Leggi di più" di un post, deve essere 
+reindirizzato alla pagina che mostra il contenuto completo di quel post.
+Questa pagina deve mostrare il titolo del post e il suo contenuto completo.
+
+Area Amministratore:
+
+Crea un'area amministratore (/admin) accessibile tramite una pagina separata.
+Quest'area deve permettere la possibilità di cancellare e inserire nuovi post
+Il form di inserimento del post deve chiedere il titolo e il contenuto del nuovo post.
+
+Gestione dei Dati:
+
+Gli elenchi dei post e la creazione di nuovi post devono essere gestiti lato server.
+Utilizziamo un array di oggetti JavaScript per memorizzare i post.
+Quando un nuovo post viene creato attraverso il form, deve essere aggiunto 
+all'array di post esistente.
+
+Raccomandazioni Aggiuntive:
+
+Gestisci la visualizzazione dinamica dei dati utilizzando Pug.
+Assicurati che il codice sia ben strutturato, leggibile e commentato.
+Implementa eventuali miglioramenti o funzionalità aggiuntive 
+che ritieni possano arricchire l'esperienza dell'utente o migliorare 
+la gestione del blog
+
+Titolo: Creazione di un Blog con Express e Pug Parte 2

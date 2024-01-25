@@ -1,0 +1,32 @@
+extends layout
+
+block content
+    nav(class='breadcrumb is-centered')
+        ul
+            li
+                a(href='/') Home
+            li
+                a(href='/admin') Admin
+            li 
+                a(href='/posts/' + post.id)= post.title
+            li(class='is-active')
+                a 
+                    p Modifica
+
+    div(class='mx-6')
+        h2(class='subtitle is-3 my-4') Modifica il post
+            form(action='/admin/posts_modify/' + post.id, method='POST')
+
+                div(class='field')
+                    label(class='label', for='title') Titolo:
+                        div(class='control')
+                            input(class='input', type='text', id='title', name='title', value = post.title , required)
+
+                div(class='field')
+                    label(class='label', for='content') Contenuto:
+                        div(class='control')
+                            textarea(class='textarea', id='content', name='content', required)=  post.content
+
+                div(class='field is-grouped')
+                    div(class='control')
+                        input(class='button is-link', type='submit', value='Modifica')

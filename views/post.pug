@@ -1,0 +1,40 @@
+extends layout
+
+block content
+	if post
+		nav(class='breadcrumb is-centered')
+			ul
+				li
+					a(href="/") Home
+				li(class='is-active')
+					a
+						p= post.title
+
+
+		div
+			h2(class='title is-3')= post.title
+			p(class='mx-2')= post.content
+
+
+		div(class='mx-5 my-5')
+			form(action="/comment/" + post.id, method='POST')
+
+				div(class='field')
+					label(class='label', for='comment') Inserisci il tuo commento:
+						div(class='control')
+							input(class='input', type='text', id='comment', name='comment', required)
+				
+				div(class='field is-grouped')
+					div(class='control')
+						input(class='button is-link', type='submit', value='Invia Commento')
+
+		div
+			each comment in post.comments
+				div(class='mx-3 my-5')
+					h1(class='title is-6') Qualcuno ha detto:
+					p(class='mx-5')= comment
+
+
+	else
+		p Post non trovato
+	

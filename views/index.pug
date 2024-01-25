@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  nav(class='breadcrumb is-centered')
+    ul
+      li(class='is-active')
+        a
+          p Home
+
+  div(class='columns is-multiline')
+    each post in posts
+      div(class='column is-2 mx-5 my-5  card')
+        div(class='card-content')
+          div(class='card-image')
+            figure(class='image is-4by3')
+              img(src= post.cover_image, alt='Immagine Articolo')
+
+          div(class='content')
+              p(class='title is-6')= post.title
+
+          footer(class='buttons')
+            a(class='button is-success', href='/posts/' + post.id) Leggi di più
