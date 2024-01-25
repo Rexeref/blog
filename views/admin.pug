@@ -1,7 +1,7 @@
 extends layout
 
 block content
-  nav(class='breadcrumb is-centered')
+  nav(class='breadcrumb mx-5')
     ul
       li
         a(href='/') Home
@@ -10,18 +10,23 @@ block content
           p Admin
 
   // Link per aggiungere un nuovo post
-  div(class='box my-5')
-    h2 Amministrazione del Blog
-    a(class='button is-success', href='/admin/new') Aggiungi un nuovo post
+  div(class='columns mx-6')
+    div(class='column box  is-6 is-offset-one-quarter')
+      h2 Amministrazione del Blog
+      div(class='buttons is-centered')
+        a(class='button is-primary', href='/admin/new') Aggiungi un nuovo post
 
   if posts.length > 0
     // Elenco dei post con opzione di cancellazione
-    div(class='columns is-multiline')
+    div(class='columns is-multiline is-centered')
       each post in posts
-        div(class='column is-2 mx-5 my-5 card')
-          div(class='card-image')
-            figure(class='image is-4by3')
-              img(src= 'uploads/' + post.cover_image, alt='Immagine Articolo')
+        div(class='column is-2 mx-5 my-3 card', style='height:max-content;')
+          if post.cover_image != null
+            div(class='card-image')
+              figure(class='image is-4by3')
+                img(src= 'uploads/' + post.cover_image, alt='Immagine Articolo')
+          else
+            p
           
           div(class='card-content')
             div(class='media')

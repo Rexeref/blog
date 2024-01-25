@@ -43,35 +43,35 @@ const posts = [
     id: 4,
     comments: ["Fantastico!", 'non ci avevo mai pensato', 'incredibile', 'Avrei voluto saperlo prima'],
     title: `Il mio gatto e il suo telefono`,
-    cover_image: 'telefono.jpg',
+    cover_image: null,
     content: `Immaginate un giorno di routine. Svegliati, prenditi una tazza di caffè, poi si siedi al computer. Il tuo gatto entra nella stanza, guarda il tuo schermo, e poi... prende il telefono! Sì, hai letto bene. Il tuo gatto sta cercando di prendere il tuo telefono. Non è una battaglia quotidiana, ma è un momento che rende la vita con un gatto un po' più interessante. Potrebbe sembrare assurdo, ma è un esempio di come i gatti possono rendere la vita più divertente.`
    },
    {
     id: 5,
     comments: ["Fantastico!", 'non ci avevo mai pensato', 'incredibile', 'Avrei voluto saperlo prima'],
     title: `Come ho imparato a cucinare con i miei scarafaggi`,
-    cover_image: 'scarafaggi.jpg',
+    cover_image: null,
     content: `Hai mai avuto l'esperienza di avere scarafaggi nel tuo cibo? No, non è un modo gradevole per scoprire che hai mangiato insetti. Ma cosa succede se decidi di trasformare questa esperienza in un'occasione di cucina? Immagina di preparare un piatto con scarafaggi. Non è un'idea comune, ma può essere un modo per combattere l'infestazione di scarafaggi. Potresti scoprire che i scarafaggi hanno un sapore dolce e leggermente croccante. Nonostante l'aspetto poco attraente, potrebbe essere un modo unico per sperimentare nuovi ingredienti culinari.`
    },
    {
     id: 6,
     comments: ["Fantastico!", 'non ci avevo mai pensato', 'incredibile', 'Avrei voluto saperlo prima'],
     title: `L'importanza della buona igiene dentale per i gatti`,
-    cover_image: 'dentista.jpg',
+    cover_image: null,
     content: `Le buone abitudini igieniche sono importanti per tutti, inclusi i gatti. I gatti, infatti, hanno bisogno di pulizia dentale regolare per mantenere la salute dei loro denti e delle loro gengive. Tuttavia, i gatti sono creature molto indipendenti e spesso non amano essere trattati come bambini. Quindi, come si può fare per convincere un gatto a pulirsi i denti? Un'opzione potrebbe essere offrire una torta di pollo come premio. I gatti amano il pollo, quindi potrebbero essere più propensi a pulirsi i denti per ottenere la loro bella torta.`
    },
    {
     id: 7,
     comments: ["Fantastico!", 'non ci avevo mai pensato', 'incredibile', 'Avrei voluto saperlo prima'],
     title: `L'arte di mangiare pane in un secondo`,
-    cover_image: 'pane.jpg',
+    cover_image: null,
     content: `L'arte di mangiare pane in un secondo è un'abilità che molte persone non riescono a padroneggiare. Tuttavia, chi può farlo in un secondo potrebbe avere una serie di vantaggi. Per esempio, potrebbe risparmiare tempo a colazione, evitare di bruciare il pane o potrebbe semplicemente avere un senso del ritmo. Ma come si fa? Ecco alcuni suggerimenti per coloro che vogliono migliorare le loro abilità di mangiare pane in un secondo. Pratica, pratica, pratica. Quanto più lo fai, tanto più velocemente sarai in grado di mangiare pane in un secondo. Potrebbe sembrare semplice, ma la maggior parte delle persone non riesce a farlo in un secondo. Quindi, la prossima volta che ti trovi a mangiare pane, prova a fare lo stesso. Potrebbe sembrare difficile all'inizio, ma con la pratica diventerà secondaria.`
    },
    {
     id: 8,
     comments: ["Fantastico!", 'non ci avevo mai pensato', 'incredibile', 'Avrei voluto saperlo prima'],
     title: `I vantaggi di avere un nome difficile da pronunciare`,
-    cover_image: 'nome.jpg',
+    cover_image: null,
     content: `Avere un nome difficile da pronunciare può sembrare un handicap, ma ci sono alcuni vantaggi che potrebbe avere. Per esempio, ogni volta che qualcuno pronuncia il tuo nome sbagliato, avrai l'opportunità di correggerlo. Questo significa che potrai migliorare le tue abilità linguistiche e di comunicazione. Inoltre, potresti avere la possibilità di fare battute divertenti o di creare situazioni imbarazzanti per gli altri. Ad esempio, potresti dire "Sono un grande fan di ..." e poi lasciare che la persona faccia un'ipotesi. Quando la persona pronuncia il tuo nome sbagliato, potrai ridere divertito. Quindi, nonostante i tuoi nomi possano sembrare complicati, potrebbero avere dei vantaggi nascosti.`
    }   
 ];

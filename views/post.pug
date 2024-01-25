@@ -2,7 +2,7 @@ extends layout
 
 block content
 	if post
-		nav(class='breadcrumb is-centered')
+		nav(class='breadcrumb mx-5')
 			ul
 				li
 					a(href="/") Home
@@ -13,9 +13,12 @@ block content
 		div(class='columns is-multiline')
 			div(class='column box is-6 is-offset-one-quarter')
 				h2(class='title is-3')= post.title
-				div(class='box')
-					figure(class='image is-centered')
-						img(src= '/uploads/' + post.cover_image , alt='Immagine Articolo')
+				if post.cover_image != null
+					div(class='box')
+						figure(class='image is-centered')
+							img(src= '/uploads/' + post.cover_image , alt='Immagine Articolo')
+				else 
+					p
 				p(class='mx-2')= post.content
 
 
