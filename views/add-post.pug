@@ -10,26 +10,27 @@ block content
       li(class='is-active')
         a 
           p Nuovo Post
+  
+  div(class='columns')
+    div(class='column box is-6 is-offset-one-quarter')
+      h2(class='subtitle is-3') Aggiungi Nuovo Post
+      form(action='/admin/posts_add', method='POST', enctype="multipart/form-data")
 
-  div(class='mx-6')
-    h2(class='subtitle is-3') Aggiungi Nuovo Post
-    form(action='/admin/posts_add', method='POST', enctype="multipart/form-data")
+        div(class='field')
+          label(class='label', for='title') Titolo:
+          div(class='control')
+            input(class='input', type='text', id='title', name='title', required)
+          
+        div(class='field')
+          label(class='label', for='cover_image') Copertina:
+          div(class='control')
+            input(class='input', type='file', name='cover_image', accept='image/*')
 
-      div(class='field')
-        label(class='label', for='title') Titolo:
-        div(class='control')
-          input(class='input', type='text', id='title', name='title', required)
-        
-      div(class='field')
-        label(class='label', for='cover_image') Copertina:
-        div(class='control')
-          input(class='input', type='file', name='cover_image', accept='image/*')
+        div(class='field')
+          label(class='label', for='content') Contenuto:
+          div(class='control')
+            textarea(class='textarea', id='content', name='content', required)
 
-      div(class='field')
-        label(class='label', for='content') Contenuto:
-        div(class='control')
-          textarea(class='textarea', id='content', name='content', required)
-
-      div(class='field is-grouped')
-        div(class='control')
-          input(class='button is-link', type='submit', value='Pubblica')
+        div(class='field is-grouped')
+          div(class='control')
+            input(class='button is-link', type='submit', value='Pubblica')

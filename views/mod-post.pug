@@ -13,20 +13,21 @@ block content
                 a 
                     p Modifica
 
-    div(class='mx-6')
-        h2(class='subtitle is-3 my-4') Modifica il post
-            form(action='/admin/posts_modify/' + post.id, method='POST')
+    div(class='columns')
+        div(class='column box is-6 is-offset-one-quarter')
+            h2(class='subtitle is-3 my-4') Modifica il post
+                form(action='/admin/posts_modify/' + post.id, method='POST')
 
-                div(class='field')
-                    label(class='label', for='title') Titolo:
+                    div(class='field')
+                        label(class='label', for='title') Titolo:
+                            div(class='control')
+                                input(class='input', type='text', id='title', name='title', value = post.title , required)
+
+                    div(class='field')
+                        label(class='label', for='content') Contenuto:
+                            div(class='control')
+                                textarea(class='textarea', id='content', name='content', required)=  post.content
+
+                    div(class='field is-grouped')
                         div(class='control')
-                            input(class='input', type='text', id='title', name='title', value = post.title , required)
-
-                div(class='field')
-                    label(class='label', for='content') Contenuto:
-                        div(class='control')
-                            textarea(class='textarea', id='content', name='content', required)=  post.content
-
-                div(class='field is-grouped')
-                    div(class='control')
-                        input(class='button is-link', type='submit', value='Modifica')
+                            input(class='button is-link', type='submit', value='Modifica')

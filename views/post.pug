@@ -13,8 +13,9 @@ block content
 		div(class='columns is-multiline')
 			div(class='column box is-6 is-offset-one-quarter')
 				h2(class='title is-3')= post.title
-				figure(class='image is-centered')
-					img(src= '/uploads/' + post.cover_image , alt='Immagine Articolo')
+				div(class='box')
+					figure(class='image is-centered')
+						img(src= '/uploads/' + post.cover_image , alt='Immagine Articolo')
 				p(class='mx-2')= post.content
 
 
