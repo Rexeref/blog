@@ -30,7 +30,9 @@ async function savePosts() {
 async function readPosts() {
   FileSystem.readFile('posts.json', 'utf8', (err, data) => {
     if (err) {
-      console.log(`Error reading file from disk: ${err}`);
+      FileSystem.writeFile('posts.json', JSON.stringify(posts), (error) => {
+        if (error) throw error;
+      });
     } else {
       // parse JSON string to JSON object
       const jsonData = JSON.parse(data);
